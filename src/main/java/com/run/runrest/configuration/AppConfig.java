@@ -2,6 +2,7 @@ package com.run.runrest.configuration;
 
 import javax.sql.DataSource;
 
+import org.junit.experimental.theories.suppliers.TestedOn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,10 @@ public class AppConfig {
 	
 	@Autowired
 	private AppProperties appProperties;
+
+	@Autowired
+	private AppProperties teste;
+	
 	
 	@Bean
 	public MessageSource messageSource() {
@@ -28,21 +33,21 @@ public class AppConfig {
 		return messageSource;
 	}
 	
-	@Bean
-	public DataSource dataSource() {		
-		HikariDataSource dataSource = new HikariDataSource();
-		
-		log.info("Configurando Hikari com as propriedades {}, {}, {}", 
-				appProperties.getDataSourceUrl(), 
-				appProperties.getDataSourceDriverClassname(), 
-				appProperties.getDataSourceUsername());
-		
-		dataSource.setJdbcUrl(appProperties.getDataSourceUrl());
-		dataSource.setDriverClassName(appProperties.getDataSourceDriverClassname());		
-		dataSource.setUsername(appProperties.getDataSourceUsername());
-		dataSource.setPassword(appProperties.getDataSourcePassword());
-				
-		return dataSource;
-	}
+//	@Bean
+//	public DataSource dataSource() {		
+//		HikariDataSource dataSource = new HikariDataSource();
+//		
+//		log.info("Configurando Hikari com as propriedades {}, {}, {}", 
+//				appProperties.getDataSourceUrl(), 
+//				appProperties.getDataSourceDriverClassname(), 
+//				appProperties.getDataSourceUsername());
+//		
+//		dataSource.setJdbcUrl(appProperties.getDataSourceUrl());
+//		dataSource.setDriverClassName(appProperties.getDataSourceDriverClassname());		
+//		dataSource.setUsername(appProperties.getDataSourceUsername());
+//		dataSource.setPassword(appProperties.getDataSourcePassword());
+//				
+//		return null;
+//	}
 
 }

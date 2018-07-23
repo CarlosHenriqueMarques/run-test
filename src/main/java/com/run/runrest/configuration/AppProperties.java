@@ -20,5 +20,5 @@ public class AppProperties {
 
 	@Value("${spring.datasource.driver-class-name}")
 	private String dataSourceDriverClassname;
-		
+
 }

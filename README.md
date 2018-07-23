@@ -21,3 +21,12 @@ Os principais domínios são:
 - Patrocínio
 
 Esse projeto está aberto para sugestões de melhorias e melhores práticas no design de API.
+
+Como preparar seu ambiente:
+- Dê um clone no projeto
+- Importa o projeto no eclipse utilizando o maven
+    - File -> Import -> Maven -> Existing Maven Project
+- Criar banco de dados run
+- Iniciar o spring boot
+- Acessar : http://localhost:8080/run-service/swagger-ui.html
+
