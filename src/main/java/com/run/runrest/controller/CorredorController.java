@@ -3,6 +3,7 @@ package com.run.runrest.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.run.runrest.model.dto.CorredorDTO;
 import com.run.runrest.service.CorredorService;
+import com.run.runrest.util.CustomErrorType;
 
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -34,9 +36,10 @@ public class CorredorController {
 
 	@PostMapping("/corredor")
 	public ResponseEntity<?> add(@RequestBody CorredorDTO input) {
-		service.add(input);
-		System.out.println("EA");
-		return null;
+		if (input.getIdCorredor() != null) {
+			return new ResponseEntity<Object>(new CustomErrorType("Se saia que você está tentando inserir um corredor com ID. Aqui não pai"), HttpStatus.CONFLICT);
+		}
+		return new ResponseEntity<>(this.service.add(input), HttpStatus.OK);
 	}
 
 	@PutMapping("/corredor/{idCorredor}")
