@@ -30,3 +30,25 @@ Como preparar seu ambiente:
 - Iniciar o spring boot
 - Acessar : http://localhost:8080/run-service/swagger-ui.html
 
+Status do projeto
+- **[x] Cadastrar corredor (Verificar se o ID já existe no banco)**  
+- **[x] Consultar informações do corredor **
+- [] Editar informações do corredor ** Em andamento **
+
+- [] Cadastrar circuito
+- [] Editar circuito
+- [] Consultar circuito
+
+- [] Cadastrar patrocínio
+- [] Consultar patrocínio 
+- [] Editar patrocínio  
+
+- [] Cadastrar corrida com suas dependências (Circuito, patrocínio e endereço)
+- [] Editar corrida com suas dependências (Circuito, patrocínio e endereço)
+- [] Consultar corrida com suas dependências (Circuito, patrocínio e endereço)
+
+- [] Associar o corredor a corrida
+
+- [] Consultar resultado da corrida
+
+
