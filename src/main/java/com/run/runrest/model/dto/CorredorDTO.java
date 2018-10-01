@@ -3,13 +3,7 @@ package com.run.runrest.model.dto;
 import java.time.LocalDate;
 import java.util.List;
 
-import org.junit.Ignore;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.run.runrest.model.CorredorCorrida;
 
 import lombok.AllArgsConstructor;

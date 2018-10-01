@@ -26,6 +26,7 @@ Como preparar seu ambiente:
 - Dê um clone no projeto
 - Importa o projeto no eclipse utilizando o maven
     - File -> Import -> Maven -> Existing Maven Project
+- Configure o Lombok, caso não conheça. Dê uma olhada nesse artigo (http://blog.caelum.com.br/java-menos-verboso-com-lombok/)
 - Criar banco de dados run
 - Iniciar o spring boot
 - Acessar : http://localhost:8080/run-service/swagger-ui.html
