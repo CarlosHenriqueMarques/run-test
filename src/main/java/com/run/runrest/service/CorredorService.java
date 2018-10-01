@@ -13,5 +13,7 @@ public interface CorredorService {
 	public CorredorDTO add(CorredorDTO input);
 	
 	public List<CorredorDTO> obterCorredor(Long idCorredor);
+	
+	public CorredorDTO edit(CorredorDTO input);
 
 }

@@ -16,9 +16,12 @@ class CorredorCustomRepositoryImpl implements CorredorCustomRepository {
 
 	@Override
 	public Corredor salvarCorredor(Corredor input) {
-	
 		em.persist(input);
-		
+		return input;
+	}
+
+	@Override
+	public Corredor editarCorredor(Corredor input) {
 		return input;
 	}
 

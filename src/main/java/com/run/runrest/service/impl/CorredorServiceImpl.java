@@ -23,10 +23,8 @@ public class CorredorServiceImpl implements CorredorService {
 	@Override
 	public CorredorDTO add(CorredorDTO input) {
 		Corredor entity = corredorMapper.convertToEntity(input);
-		corredorRepository.salvarCorredor(entity);
-
-		
-		
+		corredorRepository.save(entity);
+		//corredorRepository.salvarCorredor(entity);
 		return input;
 	}
 
@@ -34,6 +32,11 @@ public class CorredorServiceImpl implements CorredorService {
 	public List<CorredorDTO> obterCorredor(Long idCorredor) {
 		List<CorredorDTO> corredores = corredorMapper.mapperList(corredorRepository.findByIdCorredor(idCorredor));
 		return corredores;
+	}
+
+	@Override
+	public CorredorDTO edit(CorredorDTO input) {
+		return null;
 	}
 
 }
